@@ -1,41 +1,22 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-    /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-    */
     --bg-color: #fff1f7;
     --main-color: #ffc2e6;
     --text-color: #353430;
     --accent-color: #ff8dcb;
+    --hover-color: #32312d66;
     --bg-image: url(../images/cover-image-light.png);
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --bg-color: #fff1f7;
-        --main-color: #ffc2e6;
-        --text-color: #353430;
-        --accent-color: #ff8dcb;
-        --bg-image: url(../images/cover-image-light.png);
-    }
-
-    .theme_auto .header__rec {
-        display: none;
-    }
 }
 
 .theme_light .header__theme-menu-button {
     color: var(--text-color);
 }
 
+.theme_light .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--text-color);
+}
+
 .theme_light .header__theme-menu-button_active {
-    border: 1px solid var(--text-color);
+    outline: 1px solid var(--text-color);
 }
 
 .theme_light .header__rec {
@@ -58,4 +39,49 @@
 
 .theme_light .main__title {
     color: var(--text-color);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #fff1f7;
+        --main-color: #ffc2e6;
+        --text-color: #353430;
+        --accent-color: #ff8dcb;
+        --hover-color: #32312d66;
+        --bg-image: url(../images/cover-image-light.png);
+    }
+
+    .theme_auto .header__theme-menu-button {
+        color: var(--text-color);
+    }
+
+    .theme_auto .header__theme-menu-button:focus-visible {
+        border-block-end: 1px solid var(--text-color);
+    }
+
+    .theme_auto .header__theme-menu-button_active {
+        outline: 1px solid var(--text-color);
+    }
+
+    .theme_auto .decorated-zone::before {
+        border-block-start: 1px solid var(--text-color);
+        border-inline-end: 1px solid var(--text-color);
+    }
+
+    .theme_auto .decorated-zone::after {
+        border-block-end: 1px solid var(--text-color);
+        border-inline-start: 1px solid var(--text-color);
+    }
+
+    .theme_auto .header__rec {
+        display: none;
+    }
+
+    .theme_auto .title-decor {
+        color: var(--text-color);
+    }
+
+    .theme_auto .main__title {
+        color: var(--text-color);
+    }
 }

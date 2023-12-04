@@ -1,5 +1,3 @@
-/* Глобальные стили для проекта, их можно дополнять и менять по желанию */
-
 *,
 *::before,
 *::after {
@@ -77,4 +75,16 @@ a {
 .link {
     text-shadow: 2px 2px 0px var(--accent-color);
     text-decoration: none;
+}
+
+.link:hover {
+    border-block-end: 1px solid var(--text-color);
+}
+
+.link:focus {
+    outline: none;
+}
+
+.link:focus-visible {
+    border: 1px solid var(--text-color);
 }

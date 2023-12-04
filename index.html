@@ -18,7 +18,7 @@
 
     <body class="page">
         <header class="header decorated-zone">
-            <span class="header__rec">REC</span>
+            <span class="header__rec" aria-hidden="true">REC</span>
             <nav class="header__theme-menu">
                 <ul class="header__theme-menu-list">
                     <li class="header__theme-menu-item">
@@ -100,11 +100,31 @@
             <section class="main__section">
                 <h4 class="title-decor">А можно в картинках?</h4>
                 <div class="main__gallery">
-                    <img class="main__image" src="./images/sunset.png" alt="Закат" />
-                    <img class="main__image" src="./images/ice-cream.png" alt="Мороженое в виде мультяшных персонажей" />
-                    <img class="main__image" src="./images/tape.png" alt="Касета" />
-                    <img class="main__image" src="./images/books.png" alt="Книги стопкой" />
-                    <img class="main__image" src="./images/street.png" alt="Улица" />
+                    <picture class="main__picture">
+                        <source srcset="./images/sunset.avif" type="image/avif" />
+                        <source srcset="./images/sunset.webp" type="image/webp" />
+                        <img class="main__image" src="./images/sunset.png" alt="Закат" loading="lazy" />
+                    </picture>
+                    <picture class="main__picture">
+                        <source srcset="./images/ice-cream.avif" type="image/avif" />
+                        <source srcset="./images/ice-cream.webp" type="image/webp" />
+                        <img class="main__image" src="./images/ice-cream.png" alt="Мороженое в виде мультяшных персонажей" loading="lazy" />
+                    </picture>
+                    <picture class="main__picture">
+                        <source srcset="./images/tape.avif" type="image/avif" />
+                        <source srcset="./images/tape.webp" type="image/webp" />
+                        <img class="main__image" src="./images/tape.png" alt="Касета" loading="lazy" />
+                    </picture>
+                    <picture class="main__picture">
+                        <source srcset="./images/books.avif" type="image/avif" />
+                        <source srcset="./images/books.webp" type="image/webp" />
+                        <img class="main__image" src="./images/books.png" alt="Книги стопкой" loading="lazy" />
+                    </picture>
+                    <picture class="main__picture">
+                        <source srcset="./images/street.avif" type="image/avif" />
+                        <source srcset="./images/street.webp" type="image/webp" />
+                        <img class="main__image" src="./images/street.png" alt="Улица" loading="lazy" />
+                    </picture>
                 </div>
             </section>
         </main>
