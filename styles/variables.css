@@ -5,9 +5,9 @@
 
 :root {
     --bg-color: #000028;
-    --main-color: #DB00FF;
-    --text-color: #F1B2CE;
-    --accent-color: #FF0070;
-    --main-font: 'IBM Plex mono', Arial, Helvetica, sans-serif;
+    --main-color: #db00ff;
+    --text-color: #f1b2ce;
+    --accent-color: #ff0070;
+    --main-font: "IBM Plex mono", Arial, Helvetica, sans-serif;
     --bg-image: url(../images/cover-image-dark.png);
 }

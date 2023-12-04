@@ -11,16 +11,18 @@
     font-weight: 400;
     line-height: 1.3;
     font-size: 18px;
+    display: grid;
+    gap: 40px;
 }
 
-.header{
+.header {
     display: grid;
     grid-template: 1fr minmax(min-content, max-content) 1fr / 1fr 1fr;
     block-size: 100vb;
     padding: 10px;
 }
 
-.header__title{
+.header__title {
     color: var(--main-color);
     text-shadow: 4px 4px 0px var(--accent-color);
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -29,7 +31,7 @@
     grid-column: 1 / 3;
 }
 
-.header__rec{
+.header__rec {
     position: absolute;
     inset-block-start: 10px;
     inset-inline-end: 38px;
@@ -37,8 +39,8 @@
     color: var(--accent-color);
 }
 
-.header__rec::before{
-    content: '';
+.header__rec::before {
+    content: "";
     display: block;
     position: absolute;
     inset-inline-end: -19px;
@@ -50,19 +52,19 @@
     box-shadow: 0 0 4px 3px var(--accent-color);
 }
 
-.header__theme-menu{
+.header__theme-menu {
     grid-column: 1 / 3;
     align-self: center;
     justify-self: end;
 }
 
-.header__theme-menu-list{
+.header__theme-menu-list {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
     background: none;
     border: none;
     text-transform: lowercase;
@@ -73,66 +75,76 @@
     color: var(--accent-color);
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
     pointer-events: none;
     border: 1px solid var(--accent-color);
 }
 
-.header__subtitle{
+.header__subtitle {
     grid-column: 1 / 3;
     align-self: center;
 }
 
-.header__subtitle-text{
+.header__subtitle-text {
     font-weight: 700;
     font-size: 18px;
 }
 
-.mian{
+.main {
     display: flex;
     flex-direction: column;
     gap: 50px;
     padding: 0 10px;
-    margin: 40px 0;
 }
 
-.mian__section{
+.main__section {
     display: grid;
     gap: 20px;
 }
 
-.mian__section:nth-child(4){
+.main__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--accent-color);
+}
+
+.main__section:nth-child(4) {
     gap: 10px;
 }
 
-.mian__section-subparagraphs{
+.main__section-subparagraphs {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.mian__list{
-    display: flex;
-    flex-direction: column;
+.main__list {
+    display: grid;
     gap: 20px;
 }
 
-.mian__list-item{
+.main__list-item {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.main__gallery{
+.main__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.main__gallery {
     display: grid;
     gap: 10px;
 }
 
-.main__image{
+.main__image {
     inline-size: 100%;
 }
 
-.footer{
+.footer {
     display: flex;
     block-size: 100vb;
     padding: 10px;
@@ -140,7 +152,7 @@
     justify-content: center;
 }
 
-.footer__title{
+.footer__title {
     color: var(--main-color);
     text-shadow: 2px 2px 0px var(--accent-color);
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -148,106 +160,132 @@
     line-height: 0.825;
 }
 
-@media (width >= 768px){
-    .header{
+@media (width >= 768px) {
+
+    .page {
+        gap: 60px;
+    }
+
+    .header {
         padding: 20px;
     }
 
-    .header__rec{
+    .header__rec {
         inset-block-start: 20px;
         inset-inline-end: 48px;
     }
 
-    .decorated-zone::before{
+    .decorated-zone::before {
         inset-inline-end: 20px;
         inset-block-start: 20px;
     }
 
-    .decorated-zone::after{
+    .decorated-zone::after {
         inset-inline-start: 20px;
         inset-block-end: 20px;
     }
 
-    .header__title{
+    .header__title {
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-        margin-inline-start: -20px
+        margin-inline-start: -20px;
     }
 
     .header__subtitle {
         grid-column: 2 / 3;
     }
 
-    .mian{
+    .main {
         padding: 0 20px;
         gap: 80px;
     }
 
-    .mian__section:nth-child(2n - 1){
+    .main__section:not(:last-child) {
         grid-template-columns: 1fr 2fr;
     }
 
-    .mian__section:nth-child(2){
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .mian__section:nth-child(2) .mian__title{
+    .main__section:nth-child(2) .main__title {
         grid-column: 1;
     }
 
-    .mian__section:nth-child(2) .mian__list{
-        grid-column: 1 / 4;
+    .main__section:nth-child(2) .main__list {
+        grid-column: 1 / 3;
     }
 
-    .mian__section:nth-child(4){
+    .main__section-subparagraphs {
+        grid-column: 2 / 3;
+    }
+
+    .main__section:nth-child(4) {
         gap: 20px;
     }
 
-    .main__gallery{
+    .main__gallery {
         gap: 20px;
         grid-template-areas:
-        "sunset sunset ice-cream"
-        "tape books ice-cream"
-        "tape street street";
+            "sunset sunset ice-cream"
+            "tape books ice-cream"
+            "tape street street";
     }
 
-    .main__image{
+    .main__image {
         block-size: 100%;
         object-fit: cover;
     }
 
-    .main__image:nth-child(1){
+    .main__image:nth-child(1) {
         grid-area: sunset;
     }
 
-    .main__image:nth-child(2){
+    .main__image:nth-child(2) {
         grid-area: ice-cream;
     }
 
-    .main__image:nth-child(3){
+    .main__image:nth-child(3) {
         grid-area: tape;
     }
 
-    .main__image:nth-child(4){
+    .main__image:nth-child(4) {
         grid-area: books;
     }
 
-    .main__image:nth-child(5){
+    .main__image:nth-child(5) {
         grid-area: street;
+    }
+
+    .footer__title {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 }
 
-@media (width >= 1024px){
+@media (width >= 1024px) {
+
+    .main__section:not(:last-child) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .main__section:nth-child(1) .main__list {
+        grid-column: 2 / 4;
+    }
+
+    .main__section:nth-child(2) .main__list {
+        grid-column: 1 / 4;
+    }
+
+    .main__section-subparagraphs {
+        grid-column: 2 / 4;
+    }
+
     .header__theme-menu {
         align-self: start;
         justify-self: center;
     }
 
-    .header__theme-menu-list{
+    .header__theme-menu-list {
         flex-direction: row;
         gap: 10px;
     }
 
-    .mian__section:nth-child(2) .mian__list {
-        flex-direction: row;
+    .main__section:nth-child(2) .main__list {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
