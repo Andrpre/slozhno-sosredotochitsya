@@ -3,9 +3,13 @@
     --main-color: #db00ff;
     --text-color: #f1b2ce;
     --accent-color: #ff0070;
+    --button-color: #ff0070;
+    --button-hover-color: #ff007066;
     --hover-color: #ff007066;
-    --main-font: "IBM Plex mono", Arial, Helvetica, sans-serif;
+    --title-decor-color: #000028;
+    --main-font: "IBM Plex mono", monospace;
     --title-size-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --title-size-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --bg-image: url(../images/cover-image-dark.png);
+    --rec-display: block;
 }

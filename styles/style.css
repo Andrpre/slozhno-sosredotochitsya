@@ -1,5 +1,5 @@
 .title-decor {
-    color: var(--bg-color);
+    color: var(--title-decor-color);
     background-color: var(--accent-color);
 }
 
@@ -121,12 +121,12 @@
     padding: 1.5px 13px;
     line-height: 1;
     block-size: 23px;
-    color: var(--accent-color);
+    color: var(--button-color);
     appearance: none;
 }
 
 .header__theme-menu-button:hover {
-    outline: 1px solid var(--hover-color);
+    outline: 1px solid var(--button-hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -331,7 +331,6 @@
 }
 
 @media (width >= 1024px) {
-
     .header {
         min-block-size: 768px;
     }
@@ -397,7 +396,7 @@
 }
 
 .theme_light .title-decor {
-    color: var(--text-color);
+    color: var(--title-decor-color);
 }
 
 .theme_light .main__title {
@@ -410,41 +409,45 @@
         --main-color: #ffc2e6;
         --text-color: #353430;
         --accent-color: #ff8dcb;
+        --button-color: #353430;
+        --button-hover-color: #32312d66;
         --hover-color: #32312d66;
+        --title-decor-color: #353430;
         --bg-image: url(../images/cover-image-light.png);
+        --rec-display: none;
     }
 
     .header__theme-menu-button {
-        color: var(--text-color);
+        color: var(--button-color);
     }
 
     .header__theme-menu-button:focus-visible {
-        border-block-end: 1px solid var(--text-color);
+        border-block-end: 1px solid var(--button-color);
     }
 
     .header__theme-menu-button_active {
-        outline: 1px solid var(--text-color);
+        outline: 1px solid var(--button-color);
     }
 
     .decorated-zone::before {
-        border-block-start: 1px solid var(--text-color);
-        border-inline-end: 1px solid var(--text-color);
+        border-block-start: 1px solid var(--button-color);
+        border-inline-end: 1px solid var(--button-color);
     }
 
     .decorated-zone::after {
-        border-block-end: 1px solid var(--text-color);
-        border-inline-start: 1px solid var(--text-color);
+        border-block-end: 1px solid var(--button-color);
+        border-inline-start: 1px solid var(--button-color);
     }
 
     .header__rec {
-        display: none;
+        display: var(--rec-display);
     }
 
     .title-decor {
-        color: var(--text-color);
+        color: var(--title-decor-color);
     }
 
     .main__title {
-        color: var(--text-color);
+        color: var(--button-color);
     }
 }

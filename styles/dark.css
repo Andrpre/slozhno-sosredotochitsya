@@ -3,6 +3,10 @@
     --main-color: #db00ff;
     --text-color: #f1b2ce;
     --accent-color: #ff0070;
+    --button-color: #ff0070;
+    --button-hover-color: #ff007066;
     --hover-color: #ff007066;
+    --title-decor-color: #000028;
     --bg-image: url(../images/cover-image-dark.png);
+    --rec-display: block;
 }
